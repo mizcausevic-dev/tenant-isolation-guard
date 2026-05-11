@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tenant Isolation Guard - Hero</title>
+  <style>
+    body{margin:0;background:#07111d;font-family:Segoe UI,Arial,sans-serif;color:#eef3ff}
+    .frame{width:1600px;height:900px;padding:48px;box-sizing:border-box;background:linear-gradient(180deg,#07111d 0%,#0b1628 100%)}
+    .panel{height:100%;border:1px solid #22385c;border-radius:32px;background:#101a30;padding:42px;box-sizing:border-box}
+    .eyebrow{font-size:22px;letter-spacing:.26em;color:#7fc2ff}
+    h1{font:700 78px/1.04 Georgia,serif;margin:20px 0 18px;color:#f5eed9;max-width:1200px}
+    p{font-size:26px;line-height:1.45;color:#b8c1d2;max-width:1120px;margin:0 0 30px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .card{background:#16243d;border:1px solid #28476e;border-radius:24px;padding:26px}
+    .label{font-size:18px;color:#aeb9cf;text-transform:uppercase}
+    .value{font:700 54px/1 Georgia,serif;color:#f8ecc6;margin:14px 0 10px}
+    .copy{font-size:18px;line-height:1.35;color:#d1d8e6}
+    .lane{margin-top:28px;border:1px solid #2d4d77;border-radius:24px;padding:26px}
+    .tag{font-size:16px;letter-spacing:.22em;color:#ffc3d7;text-transform:uppercase}
+    .lane-title{font:700 46px/1.1 Georgia,serif;color:#f6eed8;margin:14px 0 10px}
+    .lane-body{font-size:23px;color:#b8c0d3}
+  </style>
+</head>
+<body>
+<div class="frame"><div class="panel">
+  <div class="eyebrow">TENANT ISOLATION GUARD</div>
+  <h1>Score cross-tenant access paths before a convenience bridge becomes a boundary failure.</h1>
+  <p>The service tracks tenant registry posture, request-path pressure, shared credentials, region crossings, and restricted-data exposure in one control surface.</p>
+  <div class="stats">
+    <div class="card"><div class="label">Tenants tracked</div><div class="value">4</div><div class="copy">Standard, strict, regulated, and restricted isolation tiers in one registry.</div></div>
+    <div class="card"><div class="label">Critical requests</div><div class="value">1</div><div class="copy">One request path already crosses a breakglass route into restricted regional data.</div></div>
+    <div class="card"><div class="label">Shadow admin paths</div><div class="value">2</div><div class="copy">Two tenant lanes still expose admin-adjacent surfaces that deserve review.</div></div>
+    <div class="card"><div class="label">Cross-region bridges</div><div class="value">1</div><div class="copy">At least one request path is widening regional blast radius today.</div></div>
+  </div>
+  <div class="lane">
+    <div class="tag">Current decision lane</div>
+    <div class="lane-title">Re-scope the breakglass path before platform admins can cross into restricted APAC tenant data.</div>
+    <div class="lane-body">This repo treats multi-tenant safety like an operational control problem, not a checkbox in an auth diagram.</div>
+  </div>
+</div></div>
+</body>
+</html>

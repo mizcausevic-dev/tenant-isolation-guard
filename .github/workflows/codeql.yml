@@ -1,0 +1,29 @@
+name: CodeQL
+
+on:
+  push:
+    branches:
+      - main
+      - project/**
+  pull_request:
+  schedule:
+    - cron: "0 5 * * 1"
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: csharp
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - run: dotnet build TenantIsolationGuard.sln -c Release
+      - uses: github/codeql-action/analyze@v3

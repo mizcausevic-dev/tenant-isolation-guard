@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tenant Isolation Guard - Proof</title>
+  <style>
+    body{margin:0;background:#08111c;font-family:Consolas,monospace}
+    .frame{width:1600px;height:900px;padding:48px;box-sizing:border-box;background:#08111c}
+    .panel{height:100%;border-radius:32px;border:1px solid #22385c;background:#101a2f;padding:42px}
+    .eyebrow{font-family:Segoe UI,Arial,sans-serif;font-size:22px;letter-spacing:.24em;color:#7dc3ff;text-transform:uppercase}
+    .title{font:700 62px/1.08 Georgia,serif;color:#f5edd7;margin:18px 0 26px;max-width:1180px}
+    .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px}
+    .code,.facts{background:#091321;border:1px solid #27476f;border-radius:24px;padding:24px}
+    pre{margin:0;color:#d9ffe7;font-size:22px;line-height:1.42;white-space:pre-wrap}
+    .facts h2{font-family:Segoe UI,Arial,sans-serif;font-size:24px;color:#e0e8f3;margin:0 0 14px}
+    .facts ul{font-family:Segoe UI,Arial,sans-serif;margin:0;padding-left:22px;color:#c4cedf;font-size:21px;line-height:1.5}
+  </style>
+</head>
+<body>
+<div class="frame"><div class="panel">
+  <div class="eyebrow">Validation Proof</div>
+  <div class="title">The service is not just documented. It exposes a live registry, request feed, summary route, and isolation analysis path.</div>
+  <div class="grid">
+    <div class="code"><pre>> GET /api/dashboard/summary
+{
+  "tenantsTracked": 4,
+  "criticalRequests": 1,
+  "shadowAdminPaths": 2,
+  "crossRegionBridges": 1,
+  "isolationTiers": [
+    "regulated",
+    "restricted",
+    "standard",
+    "strict"
+  ]
+}</pre></div>
+    <div class="facts">
+      <h2>Proof points</h2>
+      <ul>
+        <li>xUnit and WebApplicationFactory smoke tests pass.</li>
+        <li>Swagger UI is exposed at <code>/docs</code>.</li>
+        <li>The root route returns service JSON instead of a 404.</li>
+        <li>The analysis route scores cross-tenant, cross-region, and restricted-data pressure.</li>
+      </ul>
+    </div>
+  </div>
+</div></div>
+</body>
+</html>

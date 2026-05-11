@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tenant Isolation Guard - Analysis</title>
+  <style>
+    body{margin:0;background:#08111c;font-family:Segoe UI,Arial,sans-serif}
+    .frame{width:1600px;height:900px;padding:48px;box-sizing:border-box;background:#08111c}
+    .panel{height:100%;border-radius:32px;border:1px solid #22385c;background:#101a2f;padding:42px}
+    .eyebrow{font-size:22px;letter-spacing:.24em;color:#7ec3ff;text-transform:uppercase}
+    h1{font:700 68px/1.05 Georgia,serif;color:#f5edd7;margin:18px 0 26px;max-width:1180px}
+    .grid{display:grid;grid-template-columns:360px 1fr;gap:28px}
+    .score{background:#16233d;border:1px solid #2e4f77;border-radius:24px;padding:28px}
+    .score-label{font-size:18px;color:#b5c0d2;text-transform:uppercase}
+    .score-value{font:700 124px/1 Georgia,serif;color:#f7ebc4;margin:12px 0}
+    .status{font-size:28px;color:#ffc2d6;font-weight:700}
+    .lists{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .card{background:#17233d;border:1px solid #28466f;border-radius:24px;padding:24px}
+    .card h2{font-size:24px;color:#dce5f3;margin:0 0 14px}
+    ul{margin:0;padding-left:24px;color:#c3cedf;font-size:21px;line-height:1.45}
+    .action{margin-top:24px;background:#13223a;border:1px solid #34557d;border-radius:24px;padding:22px 24px}
+    .action-tag{font-size:16px;letter-spacing:.22em;color:#ffbfd9;text-transform:uppercase}
+    .action-text{margin-top:12px;font:700 34px/1.2 Georgia,serif;color:#f7eed7}
+  </style>
+</head>
+<body>
+<div class="frame"><div class="panel">
+  <div class="eyebrow">Isolation Analysis</div>
+  <h1>The analysis route turns tenant boundary pressure into one response order the platform team can actually enforce.</h1>
+  <div class="grid">
+    <div class="score">
+      <div class="score-label">Risk score</div>
+      <div class="score-value">98</div>
+      <div class="status">Status: ESCALATE</div>
+    </div>
+    <div>
+      <div class="lists">
+        <div class="card">
+          <h2>Issues driving the score</h2>
+          <ul>
+            <li>The request crosses a tenant boundary.</li>
+            <li>The request crosses a regional data boundary.</li>
+            <li>The path touches restricted data.</li>
+            <li>A shared credential still exists.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Checks already holding</h2>
+          <ul>
+            <li>Breakglass approval exists.</li>
+            <li>Tenant-scope claims are attached.</li>
+            <li>The route is observable as one defined path.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="action">
+        <div class="action-tag">Recommended next action</div>
+        <div class="action-text">Route the path to platform security and revoke or re-scope the bridge before further access is allowed.</div>
+      </div>
+    </div>
+  </div>
+</div></div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tenant Isolation Guard - Registry</title>
+  <style>
+    body{margin:0;background:#08111c;font-family:Segoe UI,Arial,sans-serif}
+    .frame{width:1600px;height:900px;padding:48px;box-sizing:border-box;background:#08111c}
+    .panel{height:100%;border-radius:32px;border:1px solid #22385c;background:#101a2f;padding:42px}
+    .eyebrow{font-size:22px;letter-spacing:.24em;color:#7dc3ff;text-transform:uppercase}
+    h1{font:700 66px/1.06 Georgia,serif;color:#f5edd7;margin:18px 0 26px;max-width:1180px}
+    table{width:100%;border-collapse:collapse;background:#17233d;border:1px solid #28466f;border-radius:24px;overflow:hidden}
+    th,td{padding:18px 20px;border-bottom:1px solid #243a60;text-align:left}
+    th{font-size:16px;text-transform:uppercase;color:#9eb4d0;letter-spacing:.12em}
+    td{font-size:22px;color:#d8deec}
+  </style>
+</head>
+<body>
+<div class="frame"><div class="panel">
+  <div class="eyebrow">Tenant Registry</div>
+  <h1>The registry keeps isolation tier, region, ownership, and hidden bridge posture in one view before any request is evaluated.</h1>
+  <table>
+    <thead>
+      <tr><th>Tenant</th><th>Region</th><th>Tier</th><th>Owner lane</th><th>Privileged bridge</th><th>Shadow admin path</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Core United States</td><td>us-east</td><td>strict</td><td>Platform Security</td><td>No</td><td>No</td></tr>
+      <tr><td>Finance Europe</td><td>eu-west</td><td>regulated</td><td>Finance Controls</td><td>Yes</td><td>No</td></tr>
+      <tr><td>Health APAC</td><td>ap-southeast</td><td>restricted</td><td>Trust + Compliance</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Sandbox United States</td><td>us-west</td><td>standard</td><td>Developer Experience</td><td>No</td><td>Yes</td></tr>
+    </tbody>
+  </table>
+</div></div>
+</body>
+</html>

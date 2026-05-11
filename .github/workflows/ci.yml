@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - project/**
+  pull_request:
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+      - name: Restore
+        run: dotnet restore TenantIsolationGuard.sln
+      - name: Test
+        run: dotnet test TenantIsolationGuard.sln --no-restore
+      - name: Build
+        run: dotnet build TenantIsolationGuard.sln -c Release --no-restore

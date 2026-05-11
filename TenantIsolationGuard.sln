@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TenantIsolationGuard.Api", "TenantIsolationGuard.Api\TenantIsolationGuard.Api.csproj", "{500EF7EF-74DA-4200-A6F6-207CC40C1E88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TenantIsolationGuard.Tests", "TenantIsolationGuard.Tests\TenantIsolationGuard.Tests.csproj", "{EDE0EF0D-4DDB-42A2-B454-1AE51F14F2E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{500EF7EF-74DA-4200-A6F6-207CC40C1E88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{500EF7EF-74DA-4200-A6F6-207CC40C1E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{500EF7EF-74DA-4200-A6F6-207CC40C1E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{500EF7EF-74DA-4200-A6F6-207CC40C1E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDE0EF0D-4DDB-42A2-B454-1AE51F14F2E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE0EF0D-4DDB-42A2-B454-1AE51F14F2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE0EF0D-4DDB-42A2-B454-1AE51F14F2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE0EF0D-4DDB-42A2-B454-1AE51F14F2E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
