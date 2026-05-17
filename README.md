@@ -118,7 +118,7 @@ Response:
 ## Run Locally
 
 ```powershell
-Set-Location "C:\Users\chaus\dev\repos\tenant-isolation-guard"
+cd tenant-isolation-guard
 dotnet run --project TenantIsolationGuard.Api --urls http://127.0.0.1:5108
 ```
 
@@ -130,7 +130,7 @@ Then open:
 ## Validation
 
 ```powershell
-Set-Location "C:\Users\chaus\dev\repos\tenant-isolation-guard"
+cd tenant-isolation-guard
 dotnet test TenantIsolationGuard.sln
 dotnet build TenantIsolationGuard.sln -c Release
 ```
